@@ -4,10 +4,6 @@
 /dist
 /tmp
 
-*.ngsummary.json
-*.ngfactory.ts
-
-
 # dependencies
 /node_modules
 
