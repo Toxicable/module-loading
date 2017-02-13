@@ -9,7 +9,6 @@ import {map} from 'rxjs/operator/map';
 import {mergeMap} from 'rxjs/operator/mergeMap';
 
  import {Route, LoadChildren } from '@angular/router';
-import { LazyComp} from './lazy.module'
 // export const ROUTES = new InjectionToken<Route[][]>('ROUTES');
 
 // export class LoadedRouterConfig {
@@ -22,7 +21,7 @@ declare let System: any;
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: 'App component',
 })
 export class AppComponent {
 
@@ -34,7 +33,7 @@ export class AppComponent {
 
   let exportName = 'AppComponent';
    System.import('./lazy.module.ngfactory.ts').then((a: any) => {
-     compResolver.resolveComponentFactory(LazyComp);
+     //compResolver.resolveComponentFactory();
    });
   }
 
