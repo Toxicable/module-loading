@@ -9,8 +9,7 @@
     "removeComments": false,
     "noImplicitAny": true,
     "declaration": true,
-    "outDir": "./lib",
-    "stripInternal": true
+    "stripInternal": true,
   },
   "exclude": [
     "node_modules"
@@ -20,6 +19,7 @@
     "./src/plugins/lazy.module.ts"
   ],
   "angularCompilerOptions": {
-    "skipTemplateCodegen": false
+    "skipTemplateCodegen": false,
+    "genDir": "./output"
   }
 }

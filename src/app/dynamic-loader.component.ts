@@ -1,27 +1,33 @@
 import { LazyComp } from './../plugins/lazy.module';
-import { Component, Injector, NgModuleFactory, ComponentFactoryResolver, ViewContainerRef } from '@angular/core';
+import {
+  Component, Injector, NgModuleFactory,
+  ComponentFactoryResolver, ViewContainerRef,
+  Input
+} from '@angular/core';
 
 declare let System: any;
+const FACTORY_SUFFIX = 'NgFactory';
 
 @Component({
   selector: 'dynamic-loader',
   template: ''
 })
-export class DynamicLoader {
+export class DynamicComponentLoader {
+
+  @Input() componentName: string
+  @Input() moduleName: string;
+  @Input() moduleFactoryPath: string
+
   constructor(
     private injector: Injector,
     private viewRef: ViewContainerRef,
   ) {
-    const plugin = {
-      name: 'Lazy',
-      path: '../plugins/lazy.module.ngfactory.ts'
-    }
-    System.import('../plugins/lazy.module.ngfactory.ts').then((componentFactories: any) => {
-      const compType = componentFactories.LazyCompNgFactory._componentType
-      const factory: NgModuleFactory<any> = componentFactories[plugin.name + 'NgFactory'];
-      const moduleRef = factory.create(injector);
-      const comp: ComponentFactoryResolver = moduleRef.componentFactoryResolver;
-      const compFactory = comp.resolveComponentFactory(compType);
+    System.import('./lazy.module.ngfactory.ts').then((moduleFactories: any) => {
+      const compType = moduleFactories['LazyCompNgFactory']._componentType;
+      const moduleFactory: NgModuleFactory<any> = moduleFactories['LazyModuleNgFactory'];
+      const moduleRef = moduleFactory.create(injector);
+      const componentFactoryResolver  = moduleRef.componentFactoryResolver;
+      const compFactory = componentFactoryResolver .resolveComponentFactory(compType);
       viewRef.createComponent(compFactory);
     });
   }
