@@ -6,6 +6,5 @@ export default {
   globals: {
     '@angular/core': 'ng.core',
     '@angular/common': 'ng.common',
-    '@angular/common/src/common_module': 'ng.common.CommonModule'
   }
 }
