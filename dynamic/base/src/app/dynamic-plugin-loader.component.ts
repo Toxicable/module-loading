@@ -14,6 +14,7 @@ export class DynamicComponentLoader {
   ) { }
 
   @Input() name: string;
+  @Input() componentName: string;
 
   ngOnInit() {
     const metadataPathSuffix = '.plugin-metadata.json';
@@ -31,12 +32,18 @@ export class DynamicComponentLoader {
         script.onload = () => {
           const moduleFactory: NgModuleFactory<any> = window[metadata.name][metadata.moduleName + factorySuffix];
           const moduleRef = moduleFactory.create(this.injector);
+
           const componentFactoryResolver = moduleRef.componentFactoryResolver;
           const factories: Map<any, any> = componentFactoryResolver['_factories'];
-          const keys = factories.keys();
-          const compType = keys.next().value
-          const compFactory = componentFactoryResolver.resolveComponentFactory(compType);
-          this.viewRef.createComponent(compFactory);
+
+          let compType;
+
+          const keys: any = factories.forEach(factory => {
+            if (factory.componentType.name === this.componentName) {
+              compType = factory.componentType;
+              this.viewRef.createComponent(factory);
+            }
+          })
         }
 
         document.head.appendChild(script);
@@ -45,7 +52,7 @@ export class DynamicComponentLoader {
   }
 }
 
-export interface PluginMetadata{
+export interface PluginMetadata {
   moduleName: string;
   name: string;
 }
