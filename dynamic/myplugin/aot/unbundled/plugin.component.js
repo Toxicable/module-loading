@@ -9,7 +9,7 @@ var PluginComponent = (function () {
     function PluginComponent() {
     }
     PluginComponent.prototype.ngOnInit = function () {
-        console.log('HELLO WORLD');
+        console.log('HELLO hey WORLD');
     };
     return PluginComponent;
 }());

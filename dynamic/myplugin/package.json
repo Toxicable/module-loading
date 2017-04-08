@@ -1,0 +1,37 @@
+{
+  "name": "moduleloading",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "ngc": "ngc -p tsconfig.ngc.json ",
+    "tsc": "tsc -p tsconfig.tsc.json",
+    "rollup": "rollup -c rollup.config.js",
+    "clean": "rimraf aot",
+    "build": "node build.js"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.0.0",
+    "@angular/http": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/router": "^4.0.0",
+    "core-js": "^2.4.1",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "^4.0.0",
+    "@types/jasmine": "2.5.38",
+    "@types/node": "~6.0.60",
+    "autoprefixer": "^6.5.3",
+    "codelyzer": "~2.0.0",
+    "cpy-cli": "^1.0.1",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.41.6",
+    "typescript": "^2.2.2"
+  }
+}

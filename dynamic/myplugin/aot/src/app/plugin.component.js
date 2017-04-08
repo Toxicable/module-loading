@@ -9,7 +9,7 @@ var PluginComponent = (function () {
     function PluginComponent() {
     }
     PluginComponent.prototype.ngOnInit = function () {
-        console.log('HELLO WORLD');
+        console.log('HELLO hey WORLD');
     };
     return PluginComponent;
 }());
@@ -20,4 +20,3 @@ PluginComponent = __decorate([
     })
 ], PluginComponent);
 export { PluginComponent };
-//# sourceMappingURL=plugin.component.js.map

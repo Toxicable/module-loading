@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';  
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'lazy',
@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
 })
 export class PluginComponent{
     ngOnInit(){
-        console.log('HELLO WORLD')
+        console.log('HELLO hey WORLD')
     }
 }

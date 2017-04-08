@@ -1,7 +1,7 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core')) :
 	typeof define === 'function' && define.amd ? define(['exports', '@angular/core'], factory) :
-	(factory((global['plugin-module'] = global['plugin-module'] || {}),global.ng.core));
+	(factory((global.myplugin = global.myplugin || {}),global.ng.core));
 }(this, (function (exports,import0) { 'use strict';
 
 var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
@@ -14,7 +14,7 @@ var PluginComponent = (function () {
     function PluginComponent() {
     }
     PluginComponent.prototype.ngOnInit = function () {
-        console.log('HELLO WORLD');
+        console.log('HELLO hey WORLD');
     };
     return PluginComponent;
 }());

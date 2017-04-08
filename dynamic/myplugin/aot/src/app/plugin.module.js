@@ -22,4 +22,3 @@ PluginModule = __decorate([
     })
 ], PluginModule);
 export { PluginModule };
-//# sourceMappingURL=plugin.module.js.map
