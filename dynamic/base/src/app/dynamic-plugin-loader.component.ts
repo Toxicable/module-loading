@@ -1,4 +1,4 @@
-import { Component, Injector, ViewContainerRef, NgModuleFactory, Input } from '@angular/core';
+import { Component, Injector, ViewContainerRef, NgModuleFactory, Input, ComponentFactory } from '@angular/core';
 import { Http } from "@angular/http";
 import 'rxjs/add/operator/map'
 @Component({
@@ -32,15 +32,10 @@ export class DynamicComponentLoader {
         script.onload = () => {
           const moduleFactory: NgModuleFactory<any> = window[metadata.name][metadata.moduleName + factorySuffix];
           const moduleRef = moduleFactory.create(this.injector);
+          const factories: Map<any, any> = moduleRef.componentFactoryResolver['_factories'];
 
-          const componentFactoryResolver = moduleRef.componentFactoryResolver;
-          const factories: Map<any, any> = componentFactoryResolver['_factories'];
-
-          let compType;
-
-          const keys: any = factories.forEach(factory => {
+          factories.forEach((factory: ComponentFactory<any>) => {
             if (factory.componentType.name === this.componentName) {
-              compType = factory.componentType;
               this.viewRef.createComponent(factory);
             }
           })
