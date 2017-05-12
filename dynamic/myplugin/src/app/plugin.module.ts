@@ -10,6 +10,6 @@ import { NgModule } from '@angular/core';
         PluginComponent
     ],
 })
-export class PluginModule{
+export class PluginModule {
 
 }

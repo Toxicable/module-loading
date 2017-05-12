@@ -6,8 +6,9 @@
     "ngc": "ngc -p tsconfig.ngc.json ",
     "tsc": "tsc -p tsconfig.tsc.json",
     "rollup": "rollup -c rollup.config.js",
-    "clean": "rimraf aot",
-    "build": "node build.js"
+    "clean": "rimraf aot && rimraf ../bundled-plugins",
+    "copy-metadata": "cpy .plugin-metadata.json ../bundled-plugins/myplugin",
+    "build": "npm run clean && npm run ngc && npm run tsc && npm run rollup && npm run copy-metadata"
   },
   "private": true,
   "dependencies": {
@@ -32,6 +33,7 @@
     "cpy-cli": "^1.0.1",
     "rimraf": "^2.6.1",
     "rollup": "^0.41.6",
+    "tslint": "^4.0.0",
     "typescript": "^2.2.2"
   }
 }

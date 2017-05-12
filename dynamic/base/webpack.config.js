@@ -19,6 +19,7 @@ const deployUrl = "";
 
 
 module.exports = {
+  //add externals for all external libs
   "externals": {
     '@angular/core': 'ng.core',
     '@angular/common': 'ng.common',
@@ -234,7 +235,9 @@ module.exports = {
         "favicon.ico"
       ],
       "globOptions": {
-        "cwd": "/Users/fabianwiles/Documents/module-loading/dynamic/base/src",
+        //change this here
+        //https://github.com/angular/angular-cli/issues/5811
+        "cwd": process.cwd() + "/src",
         "dot": true,
         "ignore": "**/.gitkeep"
       }

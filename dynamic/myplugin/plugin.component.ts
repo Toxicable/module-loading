@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 
     `
 })
-export class PluginComponent { }
+export class PluginComponent {
+  ngOnInit() {
+    console.log('HELLO hey WORLD')
+  }
+}
