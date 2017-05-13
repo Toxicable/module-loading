@@ -8,15 +8,12 @@ import { Component } from '@angular/core';
 var PluginComponent = (function () {
     function PluginComponent() {
     }
-    PluginComponent.prototype.ngOnInit = function () {
-        console.log('HELLO hey WORLD');
-    };
     return PluginComponent;
 }());
 PluginComponent = __decorate([
     Component({
-        selector: 'lazy',
-        template: 'hi'
+        selector: 'myplugin',
+        template: "\n    I am a plugin!\n\n    "
     })
 ], PluginComponent);
 export { PluginComponent };

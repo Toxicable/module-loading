@@ -19,7 +19,7 @@ export class DynamicComponentLoader {
 
 
   ngOnInit() {
-    const metadataPathSuffix = '.plugin-metadata.json';
+    const metadataPathSuffix = 'plugin-metadata.json';
     const factoryPathSuffix = 'plugin-factory.umd.js';
     const pluginUrlPrefix = 'assets/plugins';
     const factorySuffix = 'NgFactory';

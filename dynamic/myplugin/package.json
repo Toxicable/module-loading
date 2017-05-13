@@ -7,7 +7,7 @@
     "tsc": "tsc -p tsconfig.tsc.json",
     "rollup": "rollup -c rollup.config.js",
     "clean": "rimraf aot && rimraf ../bundled-plugins",
-    "copy-metadata": "cpy .plugin-metadata.json ../bundled-plugins/myplugin",
+    "copy-metadata": "cpy plugin-metadata.json ../bundled-plugins/myplugin",
     "build": "npm run clean && npm run ngc && npm run tsc && npm run rollup && npm run copy-metadata"
   },
   "private": true,

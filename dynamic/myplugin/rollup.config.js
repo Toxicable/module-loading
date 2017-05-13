@@ -1,4 +1,4 @@
-let metadata = require('./.plugin-metadata.json')
+let metadata = require('./plugin-metadata.json')
 
 export default {
   entry: './aot/aot/src/app/plugin.module.ngfactory.js',

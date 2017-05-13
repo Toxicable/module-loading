@@ -1,0 +1,17 @@
+{
+  "name": "moduleloading",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build-plugin": "npm run build --prefix myplugin",
+    "move-plugin": "cpy bundled-plugins/myplugin/* base/src/assets/plugins/myplugin",
+    "start-base": "npm run start --prefix base",
+    "start": "npm run build-plugin && npm run move-plugin && npm run start-base"
+  },
+  "private": true,
+  "dependencies": {
+  },
+  "devDependencies": {
+    "cpy-cli": "^1.0.1"
+  }
+}
