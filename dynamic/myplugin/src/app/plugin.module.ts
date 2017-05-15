@@ -16,7 +16,7 @@ const LAZY_CMP = new InjectionToken<any>('LAZY_CMP');
     PluginComponent
   ],
   providers: [
-    //so that the base knows what component to render
+    //provide a token for the base to know what component to render
     { provide: 'PLUGIN_ENTRY_POINT', useValue: PluginComponent }
   ]
 })
