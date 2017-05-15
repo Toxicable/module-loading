@@ -23,6 +23,7 @@ export class DynamicComponentLoader {
     const factoryPathSuffix = 'plugin-factory.umd.js';
     const pluginUrlPrefix = 'assets/plugins';
     const factorySuffix = 'NgFactory';
+    const componentToLoadToken = 'PluginEntryPoint'
 
     // retrieved the metadata for the plugin
     this.http.get(`${pluginUrlPrefix}/${this.name}/${metadataPathSuffix}`)
@@ -34,12 +35,14 @@ export class DynamicComponentLoader {
         script.src = `${pluginUrlPrefix}/${this.name}/${factoryPathSuffix}`;
 
         script.onload = () => {
+          debugger
+          //rollup builds the bundle so it's attached to the window object when loaded in
           const moduleFactory: NgModuleFactory<any> = window[metadata.name][metadata.moduleName + factorySuffix];
           const moduleRef = moduleFactory.create(this.injector);
-          const factories: Map<Function, ComponentFactory<any>> = moduleRef.componentFactoryResolver['_factories'];
 
-          const compFactory = Array.from(factories.values())
-            .find(comp => comp.componentType.name === this.componentName);
+          const compType = moduleRef.injector.get('PLUGIN_ENTRY_POINT');
+          const compFactory = moduleRef.componentFactoryResolver.resolveComponentFactory(compType);
+
           this.viewRef.createComponent(compFactory);
         }
 

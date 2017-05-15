@@ -17,6 +17,7 @@ var __extends = (this && this.__extends) || (function () {
 import * as import0 from '@angular/core';
 import * as import1 from '../../../src/app/plugin.module';
 import * as import2 from './plugin.component.ngfactory';
+import * as import3 from '../../../src/app/plugin.component';
 var PluginModuleInjector = (function (_super) {
     __extends(PluginModuleInjector, _super);
     function PluginModuleInjector(parent) {
@@ -24,11 +25,15 @@ var PluginModuleInjector = (function (_super) {
     }
     PluginModuleInjector.prototype.createInternal = function () {
         this._PluginModule_0 = new import1.PluginModule();
+        this._PluginEntryPoint_1 = import3.PluginComponent;
         return this._PluginModule_0;
     };
     PluginModuleInjector.prototype.getInternal = function (token, notFoundResult) {
         if ((token === import1.PluginModule)) {
             return this._PluginModule_0;
+        }
+        if ((token === 'PluginEntryPoint')) {
+            return this._PluginEntryPoint_1;
         }
         return notFoundResult;
     };
@@ -37,4 +42,4 @@ var PluginModuleInjector = (function (_super) {
     return PluginModuleInjector;
 }(import0.ɵNgModuleInjector));
 export var PluginModuleNgFactory = new import0.NgModuleFactory(PluginModuleInjector, import1.PluginModule);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovUHJvamVjdHMvbW9kdWxlLWxvYWRpbmcvZHluYW1pYy9teXBsdWdpbi9zcmMvYXBwL3BsdWdpbi5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovUHJvamVjdHMvbW9kdWxlLWxvYWRpbmcvZHluYW1pYy9teXBsdWdpbi9zcmMvYXBwL3BsdWdpbi5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovUHJvamVjdHMvbW9kdWxlLWxvYWRpbmcvZHluYW1pYy9teXBsdWdpbi9zcmMvYXBwL3BsdWdpbi5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovUHJvamVjdHMvbW9kdWxlLWxvYWRpbmcvZHluYW1pYy9teXBsdWdpbi9zcmMvYXBwL3BsdWdpbi5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7In0=

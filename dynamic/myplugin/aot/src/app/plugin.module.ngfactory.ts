@@ -9,21 +9,25 @@
 import * as import0 from '@angular/core';
 import * as import1 from '../../../src/app/plugin.module';
 import * as import2 from './plugin.component.ngfactory';
+import * as import3 from '../../../src/app/plugin.component';
 class PluginModuleInjector extends import0.ɵNgModuleInjector<import1.PluginModule> {
   _PluginModule_0:import1.PluginModule;
+  _PluginEntryPoint_1:any;
   constructor(parent:import0.Injector) {
     super(parent,[import2.PluginComponentNgFactory],([] as any[]));
   }
   createInternal():import1.PluginModule {
     this._PluginModule_0 = new import1.PluginModule();
+    this._PluginEntryPoint_1 = import3.PluginComponent;
     return this._PluginModule_0;
   }
   getInternal(token:any,notFoundResult:any):any {
     if ((token === import1.PluginModule)) { return this._PluginModule_0; }
+    if ((token === 'PluginEntryPoint')) { return this._PluginEntryPoint_1; }
     return notFoundResult;
   }
   destroyInternal():void {
   }
 }
 export const PluginModuleNgFactory:import0.NgModuleFactory<import1.PluginModule> = new import0.NgModuleFactory<any>(PluginModuleInjector,import1.PluginModule);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovUHJvamVjdHMvbW9kdWxlLWxvYWRpbmcvZHluYW1pYy9teXBsdWdpbi9zcmMvYXBwL3BsdWdpbi5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovUHJvamVjdHMvbW9kdWxlLWxvYWRpbmcvZHluYW1pYy9teXBsdWdpbi9zcmMvYXBwL3BsdWdpbi5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovUHJvamVjdHMvbW9kdWxlLWxvYWRpbmcvZHluYW1pYy9teXBsdWdpbi9zcmMvYXBwL3BsdWdpbi5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovUHJvamVjdHMvbW9kdWxlLWxvYWRpbmcvZHluYW1pYy9teXBsdWdpbi9zcmMvYXBwL3BsdWdpbi5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7In0=
