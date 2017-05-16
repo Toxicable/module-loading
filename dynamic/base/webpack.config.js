@@ -235,7 +235,6 @@ module.exports = {
         "favicon.ico"
       ],
       "globOptions": {
-        //change this here
         //https://github.com/angular/angular-cli/issues/5811
         "cwd": process.cwd() + "/src",
         "dot": true,

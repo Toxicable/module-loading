@@ -8,7 +8,4 @@ import { Component } from '@angular/core';
     `
 })
 export class PluginComponent {
-  ngOnInit() {
-    console.log('HELLO hey WORLD')
-  }
 }
