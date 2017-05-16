@@ -13,7 +13,7 @@ var PluginComponent = (function () {
 PluginComponent = __decorate([
     Component({
         selector: 'myplugin',
-        template: "\n    I am a plugin!\n\n    "
+        template: "\n    I am a plugin!\n    I am a changed plugin :D\n\n    "
     })
 ], PluginComponent);
 export { PluginComponent };

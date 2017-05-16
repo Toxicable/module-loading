@@ -22,12 +22,12 @@ export class DynamicComponentLoader {
     private injector: Injector,
     private viewRef: ViewContainerRef,
   ) {
+
     System.import('./lazy.module.ngfactory.ts').then((moduleFactories: any) => {
       const compType = moduleFactories['LazyCompNgFactory']._componentType;
       const moduleFactory: NgModuleFactory<any> = moduleFactories['LazyModuleNgFactory'];
       const moduleRef = moduleFactory.create(injector);
-      const componentFactoryResolver  = moduleRef.componentFactoryResolver;
-      const compFactory = componentFactoryResolver .resolveComponentFactory(compType);
+      const compFactory = moduleRef.componentFactoryResolver.resolveComponentFactory(compType);
       viewRef.createComponent(compFactory);
     });
   }

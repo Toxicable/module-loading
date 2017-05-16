@@ -10,9 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "ngc": "ngc -p tsconfig-ngc.json",
-    "tsc": "tsc -p tsconfig-ngc.json",
-    "rollup": "rollup -c rollup.config.js",
-    "build": "npm run ngc && npm run tsc && npm run rollup"
+    "tsc": "tsc -p tsconfig-ngc.json"
   },
   "private": true,
   "dependencies": {

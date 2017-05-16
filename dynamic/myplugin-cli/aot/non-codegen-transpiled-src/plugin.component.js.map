@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/app/plugin.component.ts"],"names":[],"mappings":";;;;;;AAAA,OAAO,EAAE,SAAA,EAAU,MAAO,eAAA,CAAgB;AAU1C,IAAa,eAAe;IAA5B;IAEA,CAAC;IAAD,sBAAC;AAAD,CAFA,AAEC,IAAA;AAFY,eAAe;IAR3B,SAAS,CAAC;QACT,QAAQ,EAAE,UAAU;QACpB,QAAQ,EAAE,4DAIP;KACJ,CAAC;GACW,eAAe,CAE3B;SAFY,eAAe","file":"plugin.component.js","sourceRoot":""}

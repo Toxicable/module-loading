@@ -4,6 +4,8 @@ import { Component } from '@angular/core';
   selector: 'myplugin',
   template: `
     I am a plugin!
+    I am a changed plugin :D
+
     `
 })
 export class PluginComponent {

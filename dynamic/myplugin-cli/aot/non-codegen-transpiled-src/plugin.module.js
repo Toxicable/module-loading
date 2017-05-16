@@ -5,15 +5,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { PluginComponent } from './plugin.component';
-import { NgModule, InjectionToken } from '@angular/core';
-var LAZY_CMP = new InjectionToken('LAZY_CMP');
+import { NgModule } from '@angular/core';
 var PluginModule = (function () {
     function PluginModule() {
     }
     return PluginModule;
 }());
 PluginModule = __decorate([
-    NgModule({}),
     NgModule({
         declarations: [
             PluginComponent
@@ -23,8 +21,8 @@ PluginModule = __decorate([
             PluginComponent
         ],
         providers: [
-            //so that the base knows what component to render
-            { provide: 'PluginEntryPoint', useValue: PluginComponent }
+            //provide a token for the base to know what component to render
+            { provide: 'PLUGIN_ENTRY_POINT', useValue: PluginComponent }
         ]
     })
 ], PluginModule);

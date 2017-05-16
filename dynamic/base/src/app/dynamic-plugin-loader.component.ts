@@ -30,7 +30,7 @@ export class DynamicComponentLoader {
       .map(res => res.json())
       .map((metadata: PluginMetadata) => {
 
-        // create the element to load in the factories
+        // create the element to load in the module and factories
         const script = document.createElement('script');
         script.src = `${pluginUrlPrefix}/${this.name}/${factoryFileName}`;
 
