@@ -1,5 +1,9 @@
 # module-loading
 
+If you're looking at using this then I highly suggest hold out a little long till you can use Angular Elements, theyr'e a far better fit this this kind of situation.
+See here for a small demo on what they are: https://www.youtube.com/watch?v=ljsOPm4MMEo
+
+
 This repo has 2 examples of how to dynamically load Modules in Angular
 
 ## Static
