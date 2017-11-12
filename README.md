@@ -1,8 +1,11 @@
 # module-loading
 
 If you're looking at using this then I highly suggest hold out a little long till you can use Angular Elements, theyr'e a far better fit this this kind of situation.
-See here for a small demo on what they are: https://www.youtube.com/watch?v=ljsOPm4MMEo
+See here for a small demo on what they are: https://www.youtube.com/watch?v=ljsOPm4MMEo  
+or use another form of dynamic content that you can find out about here: https://www.youtube.com/watch?v=__H65AsA_bE&feature=youtu.be&t=2h14m13s  
+and demo here: https://stackblitz.com/edit/angular-dynamic-content-viewer
 
+---
 
 This repo has 2 examples of how to dynamically load Modules in Angular
 
